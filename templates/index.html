@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - MediCo.com{% endblock %}
+
+{% block content %}
+
+<div class="hero py-5 text-center text-white" style="background: linear-gradient(to right, #2563eb, #3b82f6);">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to MediCo.com</h1>
+        <p class="lead">Revolutionizing Medical Image Analysis with AI</p>
+        <p>Empowering healthcare professionals with cutting-edge AI solutions for accurate and efficient medical imaging.</p>
+        <div class="mt-4">
+            <a href="/upload" class="btn btn-light btn-lg me-2">Upload MRI Scan</a>
+            <a href="/about" class="btn btn-outline-light btn-lg">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<div class="about py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Understanding Medical Image Analysis</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="card shadow-sm">
+                    <img src="{{ url_for('static', filename='uploads/ct-scan.jpg') }}" alt="CT Scans" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>CT Scans</strong></h5>
+                        <p class="card-text">Essential for detecting fractures, tumors, and internal injuries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="card shadow-sm">
+                    <img src="{{ url_for('static', filename='uploads/MRI.jpg') }}" alt="MRI Scans" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>MRI Scans</strong></h5>
+                        <p class="card-text">Used for diagnosing neurological disorders and soft tissue analysis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="card shadow-sm">
+                    <img src="{{ url_for('static', filename='uploads/Ultrasound.jpg') }}" alt="Ultrasound Imaging" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Ultrasound Imaging</strong></h5>
+                        <p class="card-text">Helps in fetal monitoring, cardiac evaluation, and internal organ assessment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 text-center">
+                <div class="card shadow-sm">
+                    <img src="{{ url_for('static', filename='uploads/spect-pet.png') }}" alt="PET & SPECT Scans" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>PET & SPECT Scans</strong></h5>
+                        <p class="card-text">Functional imaging for detecting cancer, brain disorders, and heart diseases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="solutions py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Our AI-Powered Solution</h2>
+        <p class="text-center">At MediCo.com, we leverage Artificial Intelligence (AI) and Deep Learning to revolutionize medical image analysis. Our solutions offer:</p>
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="icon-box">
+                    <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                    <h5>Automated Image Segmentation</h5>
+                    <p>Detects abnormalities with high precision.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon-box">
+                    <i class="fas fa-image fa-3x text-primary mb-3"></i>
+                    <h5>Real-time Image Enhancement</h5>
+                    <p>Improves image quality for better diagnosis.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon-box">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h5>Predictive Analysis</h5>
+                    <p>Helps foresee disease progression.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonials py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Doctor’s Perspective</h2>
+        <blockquote class="blockquote text-center">
+            <p>“AI-powered imaging significantly improves diagnostic accuracy and speeds up the workflow, allowing us to focus more on patient care.”</p>
+            <footer class="blockquote-footer">Dr. John Doe, <cite title="Specialization">Radiologist</cite></footer>
+        </blockquote>
+        <blockquote class="blockquote text-center mt-4">
+            <p>“With automated anomaly detection, we can identify critical conditions much earlier, leading to better treatment outcomes.”</p>
+            <footer class="blockquote-footer">Dr. Jane Smith, <cite title="Specialization">Oncologist</cite></footer>
+        </blockquote>
+    </div>
+</div>
+
+<div class="cta py-5 text-center bg-primary text-white">
+    <div class="container">
+        <h2>Join Us in Transforming Healthcare</h2>
+        <p>Whether you're a radiologist, healthcare provider, or patient, our innovative solutions are designed to enhance medical imaging, reduce errors, and improve healthcare outcomes.</p>
+        <div class="mt-4">
+            <a href="/contact" class="btn btn-light btn-lg me-2">Contact Us</a>
+            <a href="/about" class="btn btn-outline-light btn-lg">Learn More</a>
+            <a href="/signup" class="btn btn-success btn-lg">Sign Up</a>
+        </div>
+    </div>
+</div>
+
+<script src="static/script.js"></script>
+
+{% endblock %}

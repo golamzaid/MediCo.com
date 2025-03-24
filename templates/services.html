@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Services - Brain Tumor Detection{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Our Services</h1>
+<div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ url_for('static', filename='uploads/X-ray.jpeg') }}" class="card-img-top" alt="X-Ray Analysis">
+            <div class="card-body text-center">
+                <h3 class="h5">X-Ray Analysis</h3>
+                <p>Advanced AI-powered analysis of X-Ray images for accurate diagnosis and insights.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ url_for('static', filename='uploads/ct-scan.jpg') }}" class="card-img-top" alt="CT Analysis">
+            <div class="card-body text-center">
+                <h3 class="h5">CT Analysis</h3>
+                <p>Comprehensive analysis of CT scans to detect abnormalities with precision.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ url_for('static', filename='uploads/MRI.jpg') }}" class="card-img-top" alt="MRI Analysis">
+            <div class="card-body text-center">
+                <h3 class="h5">MRI Analysis</h3>
+                <p>Specialized analysis of MRI scans for detecting and classifying brain tumors.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
